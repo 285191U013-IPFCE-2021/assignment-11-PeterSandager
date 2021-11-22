@@ -1,8 +1,14 @@
-#include "sumn.h"
+#include "../include/sumn.h"
 
-#include<stdio.h>
+#include <stdio.h>
+#include <assert.h>
 
-int sumn (int n)
+int sumn(int n)
 {
-    return 0;
+
+    if (n == 1) // Base case
+        return 1;
+
+    else
+        return (2 * n - 1) + sumn(n - 1);
 }
